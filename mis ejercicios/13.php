@@ -14,9 +14,9 @@ $letra=$_REQUEST['letra'];
 
 for ($i=0; $i<$altura ; $i++) { 
      for ($j=0; $j<$ancho ; $j++) { 
-        echo("$letra");
+        echo $letra;
      }
-     echo("<br>");
+     echo"<br>";
 }
 
 ?>

@@ -18,7 +18,7 @@ if ($tipo=="normal"){
             echo "$caracter";
             $contador--;
         }
-        echo("<br>");
+        echo"<br>";
     }
 }
 else{
@@ -28,7 +28,7 @@ else{
             echo "$caracter";
             $contador--;
         }
-        echo("<br>");
+        echo"<br>";
     }
 }
 ?>

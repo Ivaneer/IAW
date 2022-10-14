@@ -29,7 +29,6 @@ else{
     echo "El maximo es: $max";
 }
 
-
 ?>
 </body>
 </html>

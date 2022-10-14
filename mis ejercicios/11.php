@@ -18,10 +18,10 @@ if( isset($_REQUEST['impuesto'])){
     $total=$total+$_REQUEST['impuesto'];
 }
 if ($edad >= 18){
-    echo("Eres mayor de edad y el importe es $total");
+    echo"Eres mayor de edad y el importe es $total";
 }
 else{
-    echo("Eres menor de edad y el importe es $total");
+    echo"Eres menor de edad y el importe es $total";
 }
 
 ?>
