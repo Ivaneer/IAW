@@ -44,13 +44,11 @@ if (isset($_REQUEST['alta'])) {
             <input type="submit" name="consultar" value="Consultar">
         </form>
     </div>
-    <div class="pop">
-        <?php
-        if (isset($mensaje) && $mensaje != '') {
-            echo "Ha introducido una flor con id $mensaje";
-        }
-        ?>
-    </div>
+    <?php
+    if (isset($mensaje) && $mensaje != '') {
+        echo "<div class=\"pop\">Ha introducido una flor con id $mensaje</div>";
+    }
+    ?>
 </body>
 
 </html>

@@ -44,14 +44,12 @@ body{
 	justify-content: center;
 	display: flex;
 	position: relative;
-	top : 250px;
-	width: 450px;
-	height: 400px;
 	background-color: rgba(130, 240, 108, 0.5);
 	border-radius: 10px;
-	margin: auto;
 	animation: pop-ani 5s;
+	top: 400px;
 }
+@keyframes
 .navegacion{
 	width: auto;
 	margin: auto;
