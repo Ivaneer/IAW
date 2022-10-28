@@ -18,6 +18,11 @@ if (isset($_REQUEST['alta'])) {
 ?>
 
 <body>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
     <div class="banner">
         <img href="#" src="../images/icono.png">
         <div class="navegacion">
