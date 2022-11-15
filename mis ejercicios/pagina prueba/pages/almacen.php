@@ -21,15 +21,17 @@
     <div class="banner">
         <div class="titulo">
             <a href="../index.html"><img src="../images/icono.png" width="135px"></a>
-            <a href="../index.html" class="home"><h1>INICIO</h1></a>
+            <a href="../index.html" class="home">
+                <h1>INICIO</h1>
+            </a>
         </div>
         <nav class="navegacion">
-        <ul>
+            <ul>
                 <li><a href="#" class="material-symbols-rounded">warehouseALMACEN</a></li>
                 <li><a href="clientes.php" class="material-symbols-rounded">account_circleCLIENTES</a></li>
-                <li><a href="compras.php" class="material-symbols-rounded">storeCOM<a href="pages/almacen.html" class="material-symbols-rounded">PRAS</a></a></li>
+                <li><a href="compras.php" class="material-symbols-rounded">storeCOM<a href="compras.php" class="material-symbols-rounded">PRAS</a></a></li>
             </ul>
-        </div>
+    </div>
     </div>
     <div class="formulario">
         <form action="" method="POST">

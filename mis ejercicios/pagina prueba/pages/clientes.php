@@ -20,8 +20,10 @@
     </script>
     <div class="banner">
         <div class="titulo">
-           <a href="../index.html"><img src="../images/icono.png" width="135px"></a>
-          <a href="../index.html" class="home"><h1>INICIO</h1></a>
+            <a href="../index.html"><img src="../images/icono.png" width="135px"></a>
+            <a href="../index.html" class="home">
+                <h1>INICIO</h1>
+            </a>
         </div>
         <nav class="navegacion">
             <ul>
@@ -36,12 +38,12 @@
             <input type="text" name="nif" placeholder="NIF:" maxlength="9"><br>
             <input type="text" name="nombre" placeholder="Nombre:" maxlength="15"><br>
             <input type="text" placeholder=" Cuenta Bancaria:" name="cuentab" maxlength="30"><br>
-            <input type="submit" name="alta" value="Alta" >
+            <input type="submit" name="alta" value="Alta">
             <input type="submit" name="baja" value="Baja">
             <input type="submit" name="consultar" value="Consultar">
         </form>
     </div>
-     <video autoplay muted plays-inline class="video">
+    <video autoplay muted plays-inline class="video">
         <source src="../images/Flores.mp4" type="video/mp4">
     </video>
     <?php
@@ -102,4 +104,5 @@
     mysqli_close($conexion);
     ?>
 </body>
+
 </html>
