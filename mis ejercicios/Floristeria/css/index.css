@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+body{
+	background-color: #b188ae;
+}
+.popM{
+	top : 250px;
+	width: 450px;
+	height: 100px;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	position: relative;
+	background-color: rgba(178,34,34, 0.6);
+	border-radius: 10px;
+	animation: pop-aniM 8s forwards;
+}
+@keyframes pop-aniM{
+	0%{
+		background-color: rgba(178,34,34, 0.6);
+	}
+	98%{
+		background-color: rgba(178,34,34, 0.6);
+	}
+	99%{
+		background-color: rgba(178,34,34, 0.3);
+	}
+	100%{
+		background-color: rgba(178,34,34, 0.0);
+		display: none;
+		visibility: hidden;
+	}
+}
+.pop{
+	top : 250px;
+	width: 450px;
+	height: 100px;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	position: relative;
+	background-color: rgba(130, 240, 108, 0.6);
+	border-radius: 10px;
+	animation: pop-ani 15s forwards;
+	backdrop-filter: blur(5px);
+}
+@keyframes pop-ani{
+	0%{
+		background-color: rgba(130, 240, 108, 0.6);
+	}
+	98%{
+		background-color: rgba(130, 240, 108, 0.6);
+	}
+	99%{
+		background-color: rgba(130, 240, 108, 0.3);
+	}
+	100%{
+		background-color: rgba(130, 240, 108, 0.0);
+		display: none;
+		visibility: hidden;
+	}
+}
+.video{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: -20;
+	width: 100%;
+}
+.formulario{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	position: relative;
+	top:200px;
+	width:  450px;
+	height: 400px;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	margin: auto;
+	backdrop-filter: blur(5px);
+}
+.formulario::before{
+	content: '';
+	position: absolute;
+	background-color: rgba(255, 255, 255, .15);
+	inset: 0;
+	transform: rotate(-5deg);
+	z-index: -3;
+}
+.formulario input[type="number"],input[type="text"]{
+	border: none;
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1rem 1.5rem;
+	margin-bottom: 10px;
+	border-radius: 100px;
+	width: 100%;
+	transition: .5s;
+}
+.formulario select{
+	border: none;
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1rem 1.5rem;
+	margin-bottom: 10px;
+	border-radius: 100px;
+	width: 115%;
+	transition: .5s;
+}
+.formulario input[type="number"]:hover,input[type="text"]:hover,select:hover{
+	background-color: white;
+}
+.formulario input[type="submit"]{
+	background-color: black;
+	color: white;
+	border-radius: 100px;
+	padding: 1rem;
+	cursor: pointer;
+}
+::placeholder{
+	color: #0f0a44;
+}
+.banner{
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	justify-content: space-between;
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, .15);
+	box-shadow: 0px 7px 7px -2px rgba(255, 255, 255, 0.15);
+}
+.titulo{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.navegacion{
+	display: flex;
+	align-items: center;
+}
+.home{
+	display: inline;
+	margin: 0 20px;
+	text-decoration: none;
+	color: #0f0a44; 
+	font-size:35px;
+}
+.home h1{
+	height: 100%;
+	vertical-align: middle;
+}
+.navegacion ul li{
+	list-style: none;
+	display: inline;
+	margin: 0 20px;
+}
+.navegacion ul li a{
+	text-decoration: none;
+	color: #0f0a44; 
+	font-size: 2vw;
+	font-size: 3vh;
+}
+.content{
+	justify-content: center;
+	display: flex;
+	margin-top: 300px;
+	font-size: 2vw;
+	font-size: 3vh;
+	color: #f2eab8;
+}
+.tablita{
+	margin: auto;
+	height: auto;
+	width: auto;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	top: 250px;
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, .4);
+}
+.tablita td,th{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
