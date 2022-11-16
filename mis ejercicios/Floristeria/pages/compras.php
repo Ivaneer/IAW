@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="shortcut icon" href="../images/icono.png"/>
+    <link rel="shortcut icon" href="../images/icono.png" />
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
     <title>Compras</title>
@@ -44,10 +44,9 @@
             $selectN = "select count(*) as cuentaN from almacen";
             $verN = mysqli_query($conexion, $selectN) or die("Error select de: " . mysqli_error($conexion));
             $filasN = mysqli_fetch_array($verN);
-             if ($filasN['cuentaN'] == 0) {
+            if ($filasN['cuentaN'] == 0) {
                 echo "<div class=\"popM\">No existen flores en la base de datos</div>";
-            
-            }else{
+            } else {
                 $ver = mysqli_query($conexion, $select) or die("Error select de: " . mysqli_error($conexion));
                 if ($ver) {
                     $filas = mysqli_fetch_array($ver);
@@ -56,8 +55,8 @@
                         echo "<option value=" . $filas['idflor'] . ">" . $filas['idflor'] . "</option>";
                         $filas = mysqli_fetch_array($ver);
                     }
-                     echo "</select>";
-                } 
+                    echo "</select>";
+                }
             }
             mysqli_close($conexion);
             ?>
@@ -72,10 +71,10 @@
     <?php
     if (isset($_REQUEST['buy']) &&  $_REQUEST['nif'] != '' &&  $_REQUEST['cant'] != '') {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")
-        or die("Problema en la conexión");
+            or die("Problema en la conexión");
         $NIF = $_REQUEST['nif'];
         $IDFLOR = $_REQUEST['idflor'];
-        $CANT=$_REQUEST['cant'];
+        $CANT = $_REQUEST['cant'];
         $selectN = "select count(*) as cuentaN from cliente where nif='$NIF'";
         $selectC = "select count(*) as cuentaC from almacen where idflor='$IDFLOR'";
         $verN = mysqli_query($conexion, $selectN) or die("Error select de: " . mysqli_error($conexion));
@@ -90,19 +89,19 @@
             if ($filasC['cuentaC'] == 0) {
                 echo "<div class=\"popM\">No existen flores en la base de datos</div>";
                 mysqli_close($conexion);
-            }else{
+            } else {
                 $selectcant = "select cantflor from almacen where idflor='$IDFLOR'";
                 $verCant = mysqli_query($conexion, $selectcant) or die("Error select de: " . mysqli_error($conexion));
                 $filasCant = mysqli_fetch_array($verCant);
-                if ($filasCant['cantflor']-$CANT <0) {
+                if ($filasCant['cantflor'] - $CANT < 0) {
                     echo "<div class=\"popM\">No existen stock suficiente de ese producto</div>";
                     mysqli_close($conexion);
-                }else{
+                } else {
                     $selectprecio = "select precioflor from almacen where idflor='$IDFLOR'";
                     $verprecio = mysqli_query($conexion, $selectprecio) or die("Error select de: " . mysqli_error($conexion));
                     $filasprecio = mysqli_fetch_array($verprecio);
-                    $precio=$filasprecio['precioflor'] * $CANT;
-                    $insert = "insert into compras VALUES('$NIF',$IDFLOR,now(),$CANT,$precio,CONCAT(now(),$IDFLOR))";
+                    $precio = $filasprecio['precioflor'] * $CANT;
+                    $insert = "insert into compras(nif,id,fecha,cantidad,precio,idfecha) VALUES('$NIF',$IDFLOR,now(),$CANT,$precio,CONCAT(now(),$IDFLOR))";
                     $update = "update almacen set cantflor=cantflor-$CANT WHERE idflor='$IDFLOR'";
                     mysqli_query($conexion, $insert) or die("Error insert de: " . mysqli_error($conexion));
                     mysqli_query($conexion, $update) or die("Error insert de: " . mysqli_error($conexion));
@@ -116,7 +115,7 @@
     }
     if (isset($_REQUEST['extracto'])) {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")
-        or die("Problema en la conexión");
+            or die("Problema en la conexión");
         $select = "select count(*) as cuenta from compras";
         $ver = mysqli_query($conexion, $select) or die("Error select de: " . mysqli_error($conexion));
         $filas = mysqli_fetch_array($ver);
@@ -139,7 +138,7 @@
             mysqli_close($conexion);
         }
     }
-    
+
     ?>
 </body>
 

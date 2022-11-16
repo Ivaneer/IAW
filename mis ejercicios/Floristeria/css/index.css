@@ -17,7 +17,7 @@ body{
 	position: relative;
 	background-color: rgba(178,34,34, 0.6);
 	border-radius: 10px;
-	animation: pop-aniM 8s forwards;
+	animation: pop-aniM 5s forwards;
 }
 @keyframes pop-aniM{
 	0%{
@@ -46,7 +46,7 @@ body{
 	position: relative;
 	background-color: rgba(130, 240, 108, 0.6);
 	border-radius: 10px;
-	animation: pop-ani 15s forwards;
+	animation: pop-ani 5s forwards;
 	backdrop-filter: blur(5px);
 }
 @keyframes pop-ani{
