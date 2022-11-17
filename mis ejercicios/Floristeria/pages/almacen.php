@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
     <title>Almacen</title>
 </head>
-<?php
-if (isset($_REQUEST['alta']) or isset($_REQUEST['baja']) or isset($_REQUEST['consultar'])) {
-    setcookie("reproduced", 1, time() + 300);
-}
-?>
 
 <body>
     <script>
@@ -52,23 +47,6 @@ if (isset($_REQUEST['alta']) or isset($_REQUEST['baja']) or isset($_REQUEST['con
     <video autoplay muted plays-inline class="video" name="video">
         <source src="../images/Flores.mp4" type="video/mp4">
     </video>
-    <?php
-    if (isset($_COOKIE['reproduced'])) {
-        echo  "<style>
-                    body {
-                        background-image: url('../images/fondo.jpg') ;
-                        z-index: -20;
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        background-position: center;
-                        }
-                    video{
-                        display: none;
-                    }
-                </style>
-        ";
-    }
-    ?>
     <?php
     if (isset($_REQUEST['alta']) &&  $_REQUEST['IdFlor'] != '' &&  $_REQUEST['precioFlor'] != '' &&  $_REQUEST['cantFlor'] != '') {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")

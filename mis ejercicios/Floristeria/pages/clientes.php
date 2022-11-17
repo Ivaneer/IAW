@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="shortcut icon" href="../images/icono.png"/>
+    <link rel="shortcut icon" href="../images/icono.png" />
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
     <title>Clientes</title>
@@ -50,7 +50,7 @@
     <?php
     if (isset($_REQUEST['alta']) &&  $_REQUEST['nif'] != '' &&  $_REQUEST['nombre'] != '' &&  $_REQUEST['cuentab'] != '') {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")
-        or die("Problema en la conexión");
+            or die("Problema en la conexión");
         $NIF = $_REQUEST['nif'];
         $select = "select count(*) as cuenta from cliente where nif='$NIF'";
         $ver = mysqli_query($conexion, $select) or die("Error select de: " . mysqli_error($conexion));
@@ -70,7 +70,7 @@
     }
     if (isset($_REQUEST['baja']) &&  $_REQUEST['nif'] != '') {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")
-        or die("Problema en la conexión");
+            or die("Problema en la conexión");
         $NIF = $_REQUEST['nif'];
         $select = "select count(*) as cuenta from cliente where nif='$NIF'";
         $ver = mysqli_query($conexion, $select) or die("Error select de: " . mysqli_error($conexion));
@@ -80,12 +80,12 @@
             $selectpr = "select count(*) as cuenta from compras where nif='$NIF'";
             $verpr = mysqli_query($conexion, $selectpr) or die("Error select de: " . mysqli_error($conexion));
             $filaspr = mysqli_fetch_array($verpr);
-            if ($filaspr['cuenta'] == 0){
+            if ($filaspr['cuenta'] == 0) {
                 $delete = "delete from cliente where nif='$NIF'";
                 mysqli_query($conexion, $delete) or die("Error delete de: " . mysqli_error($conexion));
                 echo "<div class=\"pop\">Su cliente con ID $NIF ha sido dada de baja de nuestro sistema</div>";
                 mysqli_close($conexion);
-            }else{
+            } else {
                 echo "<div class=\"popM\">No es posible borrar un nif que ha comprado anteriormente</div>";
                 mysqli_close($conexion);
             }
@@ -98,7 +98,7 @@
     }
     if (isset($_REQUEST['consultar'])) {
         $conexion = mysqli_connect("localhost", "root", "", "floristeria")
-        or die("Problema en la conexión");
+            or die("Problema en la conexión");
         $select = "select count(*) as cuenta from cliente";
         $ver = mysqli_query($conexion, $select) or die("Error select de: " . mysqli_error($conexion));
         $filas = mysqli_fetch_array($ver);

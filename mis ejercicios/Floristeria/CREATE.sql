@@ -1,5 +1,6 @@
+DROP DATABASE floristeria;
 CREATE DATABASE floristeria;
-
+use floristeria;
 
 CREATE TABLE cliente (
 nif VARCHAR(9) PRIMARY KEY NOT NULL,
