@@ -1,6 +1,6 @@
 <html>
-    <button onclick="cargarP()">Piramide Normal</button>
-    <button onclick="cargarI()">Piramide Invertida</button>
+    <button onclick="piramide(prompt('dime un numero'))">Piramide Normal</button>
+    <button onclick="piramideI(prompt('Dime un numero'))">Piramide Invertida</button>
     <script>
         function piramide(tamano) {
             let simbolo= '*';
@@ -8,9 +8,6 @@
                 document.write(simbolo , '<br>');
                 simbolo+= '*';
             }
-        }
-        function cargarP(){
-            piramide(prompt('Dime un numero'));
         }
         function piramideI(tamano) {
             let simbolo= '*';
@@ -23,8 +20,6 @@
                 document.write('<br>');
             }
         }
-        function cargarI(){
-            piramideI(prompt('Dime un numero'));
-        }
+        
     </script>
 </html>
