@@ -1,0 +1,30 @@
+<html>
+    <button onclick="cargarP()">Piramide Normal</button>
+    <button onclick="cargarI()">Piramide Invertida</button>
+    <script>
+        function piramide(tamano) {
+            let simbolo= '*';
+            for (let i = 0; i < tamano; i++) {
+                document.write(simbolo , '<br>');
+                simbolo+= '*';
+            }
+        }
+        function cargarP(){
+            piramide(prompt('Dime un numero'));
+        }
+        function piramideI(tamano) {
+            let simbolo= '*';
+            let cuanto=tamano;
+            for (let i = tamano; i > 0; i--) {
+                cuanto--;
+                for (let j = 0; j <= cuanto; j++) {
+                document.write(simbolo);
+            }
+                document.write('<br>');
+            }
+        }
+        function cargarI(){
+            piramideI(prompt('Dime un numero'));
+        }
+    </script>
+</html>
