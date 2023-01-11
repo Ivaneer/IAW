@@ -1,0 +1,30 @@
+<html>
+    <!--funcion dado 3 numero nos de el mayor-->
+    <button onclick="cuadrado(parseInt(prompt('dime la altura')),parseInt(prompt('dime la anchura')))">Cuadrado</button>
+    <button onclick="mayor(parseInt(prompt('Dime primer numero')),parseInt(prompt('Dime un segundo numero'))
+    ,parseInt(prompt('Dime tercer numero')))">Numero mayor</button>
+    <script>
+        function mayor(n1,n2,n3) {
+            let mayor=n1;
+            if (mayor < n2){
+                mayor=n2;
+            }
+            if (mayor < n3){
+                mayor=n3;
+            }
+            document.write(mayor);
+        }
+        function cuadrado(altura,anchura) {
+            let simbolo= prompt('Dime el simbolo');
+            if (altura < 0 || anchura < 0){
+                alert("No se pueden valores negativos anacleto");
+            }
+            for (let i = altura; i > 0; i--) {
+                for (let j = 0; j < anchura; j++) {
+                    document.write(simbolo);
+                }
+                document.write('<br>');
+            }
+        }
+    </script>
+</html>

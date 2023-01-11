@@ -1,25 +1,26 @@
 <html>
-    <button onclick="piramide(prompt('dime un numero'))">Piramide Normal</button>
+    <button onclick="piramide(parseInt(prompt('dime un numero')))">Piramide Normal</button>
     <button onclick="piramideI(prompt('Dime un numero'))">Piramide Invertida</button>
     <script>
         function piramide(tamano) {
-            let simbolo= '*';
+            let simbolo= prompt('Dime el simbolo');
+            let pintar=simbolo;
             for (let i = 0; i < tamano; i++) {
-                document.write(simbolo , '<br>');
-                simbolo+= '*';
+                document.write(pintar , '<br>');
+                pintar+= simbolo;
             }
         }
         function piramideI(tamano) {
-            let simbolo= '*';
+            let simbolo= prompt('Dime el simbolo');
+            let pintar=simbolo;
             let cuanto=tamano;
             for (let i = tamano; i > 0; i--) {
                 cuanto--;
                 for (let j = 0; j <= cuanto; j++) {
-                document.write(simbolo);
-            }
+                    document.write(pintar);
+                }
                 document.write('<br>');
             }
         }
-        
     </script>
 </html>
