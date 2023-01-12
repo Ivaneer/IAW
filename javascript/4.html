@@ -1,0 +1,24 @@
+<html>
+    <!--funcion dado 3 numero nos de el mayor-->
+    <button onclick="dnitrue(prompt('dime tu dni'))">Esta bien la letra?</button>
+    <button onclick="calculodni(prompt('dime los numeros del dni'))">Calcula la letra</button>
+    <script>
+        function dnitrue(dni){
+            let letra=dni.substring(dni.length-1,dni.length);
+            let numero=parseInt(dni.substring(0,dni.length-1));
+            let calculo = numero % 23;
+            if (letra == letrasdni[calculo]){
+                document.write("Es valido");
+            }else{
+                document.write("No es valido");
+            }
+        }
+        function calculodni(numero){
+            let calculo = numero % 23;
+            document.write("La letra es " + letrasdni[calculo]);
+        }
+        var letrasdni=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+        
+
+    </script>
+</html>
