@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;">t1</td>
+            <td style="border: 1px solid black;">t2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">t2</td>
+            <td style="border: 1px solid black;">t3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">t1</td>
+            <td style="border: 1px solid black;">t2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">t2</td>
+            <td style="border: 1px solid black;">t3</td>
+        </tr>
+    </table>
+    <button onclick="PintarPares()">Pintar Pares</button>
+    <button onclick="PintarImPares()">Pintar Impares</button><br>
+    <button onclick="desPintarPares()">Despintar Pares</button>
+    <button onclick="desPintarImPares()">Despintar Impares</button>
+    <script>
+        function PintarPares() {
+            let pares=document.getElementsByTagName("tr");
+            for(let i=0;i<pares.length;i=i+2){
+                pares[i].getElementsByTagName("td")[0].style.backgroundColor="purple";
+                pares[i].getElementsByTagName("td")[1].style.backgroundColor="purple";
+            }
+        }
+
+        function desPintarPares() {
+            let pares=document.getElementsByTagName("tr");
+            for(let i=0;i<pares.length;i=i+2){
+                pares[i].getElementsByTagName("td")[0].style.background="none";
+                pares[i].getElementsByTagName("td")[1].style.background="none";
+            }
+        }
+
+        function PintarImPares() {
+            let impares=document.getElementsByTagName("tr");
+            for(let i=1;i<impares.length;i=i+2){
+                impares[i].getElementsByTagName("td")[0].style.backgroundColor="purple";
+                impares[i].getElementsByTagName("td")[1].style.backgroundColor="purple";
+            }
+        }
+        function desPintarImPares() {
+            let impares=document.getElementsByTagName("tr");
+            for(let i=1;i<impares.length;i=i+2){
+                impares[i].getElementsByTagName("td")[0].style.background="none";
+                impares[i].getElementsByTagName("td")[1].style.background="none";
+            }
+        }
+    </script>
+</body>
+</html>

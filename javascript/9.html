@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom</title>
+</head>
+<body>
+    <table style="border: 1px solid black">
+        <tr>
+            <td>Hola</td>
+        </tr>
+    </table>
+    <button onclick="aumentar()">+</button>
+    <button onclick="disminuir()">-</button>
+    <script>
+        function aumentar(){
+            let x=document.getElementsByTagName("table")[0];
+            x.style.borderWidth=parseInt(x.style.borderWidth)+1+"px";
+            if (parseInt(x.style.borderWidth) > 20){
+                x.style.fontFamily="arial";
+            }else{
+                x.style.fontFamily="times New Roman";
+          }
+        }   
+
+        function disminuir(){
+            let x=document.getElementsByTagName("table")[0];
+            x.style.borderWidth=parseInt(x.style.borderWidth)-1+"px";
+            if (parseInt(x.style.borderWidth) > 20){
+                x.style.fontFamily="arial";
+            }else{
+                x.style.fontFamily="times New Roman";
+          }
+        }
+    </script>
+</body>
+</html>

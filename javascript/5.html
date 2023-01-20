@@ -1,0 +1,68 @@
+<html>
+    <table border="1">
+        <tr id="uno">
+            <td>
+                <button onclick="resaltar1()">Resaltar</button>
+                <button onclick="noresaltar1()">NO Resaltar</button>
+            </td>
+            <td>
+                <p>Texto de ejemplo</p>
+            </td>
+        </tr>
+
+        <tr id="dos">
+            <td>
+                <button onclick="resaltar2()">Resaltar</button>
+                <button onclick="noresaltar2()">NO Resaltar</button>
+            </td >
+            <td>
+                <p>Texto de ejemplo2</p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function resaltar1(){
+            let boton = document.getElementById("uno");
+            boton.innerHTML = " <td>\
+                <button onclick=\"resaltar1()\">Resaltar</button>\
+                <button onclick=\"noresaltar1()\">NO Resaltar</button>\
+            </td>\
+            <td style=\"background-color:yellow;\">\
+                <p>Texto de ejemplo</p>\
+            </td>"
+        }
+        
+        function resaltar2(){
+            let boton = document.getElementById("dos");
+            boton.innerHTML = " <td>\
+                <button onclick=\"resaltar2()\">Resaltar</button>\
+                <button onclick=\"noresaltar2()\">NO Resaltar</button>\
+            </td>\
+            <td style=\"background-color:yellow;\">\
+                <p>Texto de ejemplo2</p>\
+            </td>"
+        }
+
+        function noresaltar1(){
+            let boton = document.getElementById("uno");
+            boton.innerHTML = " <td>\
+                <button onclick=\"resaltar1()\">Resaltar</button>\
+                <button onclick=\"noresaltar1()\">NO Resaltar</button>\
+            </td>\
+            <td style=\"background-color:white;\">\
+                <p>Texto de ejemplo</p>\
+            </td>"
+        }
+
+        function noresaltar2(){
+            let boton = document.getElementById("dos");
+            boton.innerHTML = " <td>\
+                <button onclick=\"resaltar2()\">Resaltar</button>\
+                <button onclick=\"noresaltar2()\">NO Resaltar</button>\
+            </td>\
+            <td style=\"background-color:white;\">\
+                <p>Texto de ejemplo2</p>\
+            </td>"
+        }
+    </script>
+</html>

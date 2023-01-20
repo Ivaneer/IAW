@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+</head>
+<body>
+    <table style="border: 1px solid black;" onclick="document.getElementsByTagName('table')[0].style.backgroundColor='red';">
+        <tr>
+            <td style="border: 1px solid black;" onclick="color(this);">A</td>
+            <td style="border: 1px solid black;" onclick="color(this);">B</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;" onclick="color(this);">C</td>
+            <td style="border: 1px solid black;" onclick="color(this);">D</td>
+        </tr>
+    </table>
+    <script>
+        function color(obj){
+            if ( obj.style.backgroundColor=="yellow" ){
+                obj.style.backgroundColor="white";
+            }
+            else{
+                obj.style.backgroundColor="yellow";
+            }
+        }
+    </script>
+</body>
+</html>

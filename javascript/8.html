@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;">A</td>
+            <td style="border: 1px solid black;">B</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">C</td>
+            <td style="border: 1px solid black;">D</td>
+        </tr>
+    </table>
+    <button onclick="starta()">Cambia A por B</button>
+    <button onclick="startb()">Cambia C por D</button>
+</body>
+<script>
+    function starta() {
+        let A=document.getElementsByTagName("tr");
+        let letraA="";
+        let letraB="";
+        for(let i=0;i<A.length;i=i+2){
+            letraA=A[i].getElementsByTagName("td")[0];
+            letraB=A[i].getElementsByTagName("td")[1];
+        }
+        let aux=letraA.innerText;
+        letraA.innerText=letraB.innerText;
+        letraB.innerText=aux;
+    }
+
+    function startb() {
+        let letra=document.getElementsByTagName("tr");
+        let letraC="";
+        let letraD="";
+        for(let i=1;i<letra.length;i=i+2){
+            letraC=letra[i].getElementsByTagName("td")[0];
+            letraD=letra[i].getElementsByTagName("td")[1];
+        }
+        let aux=letraC.innerText;
+        letraC.innerText=letraD.innerText;
+        letraD.innerText=aux;
+    }
+</script>
+</html>
