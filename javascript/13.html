@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom</title>
+</head>
+<body>
+    <input type="text"></input><br>
+    <button onclick="añadir(0)">0</button>
+    <button onclick="añadir(1)">1</button><br>
+    <button onclick="añadir(2)">2</button>
+    <button onclick="añadir(3)">3</button><br>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;" ondblclick="caja(this);">0</td>
+            <td style="border: 1px solid black;" ondblclick="caja(this);">1</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;" ondblclick="caja(this);">2</td>
+            <td style="border: 1px solid black;" ondblclick="caja(this);">3</td>
+        </tr>
+    </table>
+    <script>
+        function caja(obj) {
+            obj.innerHTML = '';
+        }
+        function añadir(num) {
+            let text=document.getElementsByTagName('input')[0].value;
+            if (document.getElementsByTagName('td')[num].innerHTML==''){
+                document.getElementsByTagName('td')[num].innerHTML=text;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom</title>
+</head>
+<body onload="asignar()">
+    <button id="boton">Holaa</button>
+        <p id="p"></p>
+    <script>
+        function asignar(){
+            let op=parseInt(prompt('1 o 2'));
+            if (op==1){
+                document.getElementById('boton').onclick=function(){changer()};
+            }
+        }
+        function changer(){
+            document.getElementById('p').innerHTML=Date();
+        }
+    </script>
+</body>
+</html>

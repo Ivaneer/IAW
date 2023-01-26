@@ -7,24 +7,30 @@
     <title>color</title>
 </head>
 <body>
-    <table style="border: 1px solid black;" onclick="document.getElementsByTagName('table')[0].style.backgroundColor='red';">
+    <table style="border: 1px solid black;" onclick="this.style.backgroundColor='skyblue';">
         <tr>
-            <td style="border: 1px solid black;" onclick="color(this);">A</td>
-            <td style="border: 1px solid black;" onclick="color(this);">B</td>
+            <td style="border: 1px solid black;" onclick="color(this);" onmouseover="entro(this)" onmouseout="salgo(this)">A</td>
+            <td style="border: 1px solid black;" onclick="color(this);" onmouseover="entro(this)" onmouseout="salgo(this)">B</td>
         </tr>
         <tr>
-            <td style="border: 1px solid black;" onclick="color(this);">C</td>
-            <td style="border: 1px solid black;" onclick="color(this);">D</td>
+            <td style="border: 1px solid black;" onclick="color(this);" onmouseover="entro(this)" onmouseout="salgo(this)">C</td>
+            <td style="border: 1px solid black;" onclick="color(this);" onmouseover="entro(this)" onmouseout="salgo(this)">D</td>
         </tr>
     </table>
     <script>
         function color(obj){
             if ( obj.style.backgroundColor=="yellow" ){
-                obj.style.backgroundColor="white";
+                obj.style.backgroundColor="";
             }
             else{
                 obj.style.backgroundColor="yellow";
             }
+        }
+        function entro(obj){
+            obj.style.backgroundColor="red";
+        }
+        function salgo(obj){
+            obj.style.backgroundColor="";
         }
     </script>
 </body>
