@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX YYY</title>
+</head>
+<body>
+    <form name="form1">
+        Cantidad de XXX<br><input type="text" name="cantidad"><br>
+        <input type="button" onclick="mostrar()" value="Mostrar"><br>
+        <span></span>
+    </form>
+    <script>
+        function mostrar() {
+            document.getElementsByTagName('span')[0].innerHTML="";
+            let cant=parseInt(document.form1.cantidad.value);
+            for (let i = 0; i<cant; i++) {
+                document.getElementsByTagName('span')[0].innerHTML+=('<span style="color: blue" onmouseover="cambiar(this)">XXX</span><br>');
+            }
+        }
+
+        function cambiar(obj) {
+            if (obj.style.color=='red'){
+                obj.style.color='blue';
+                obj.innerHTML='XXX';
+            }else{
+                obj.style.color='red';
+                obj.innerHTML='YYY';
+            }
+        }
+    </script>
+</body>
+</html>

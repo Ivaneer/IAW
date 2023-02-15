@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="radio" name="choose" value="0">Reves<br>
+        <input type="radio" name="choose" value="1">Inicio y fin<br>
+        <input type="radio" name="choose" value="2">Blancos<br>
+        <input type="text" name="cadena">Cadena entrada<br>
+        <input type="button" onclick="mostrar()" value="Transformar"><br>
+        <span></span>
+    </form>
+    <script>
+        function vocal(letra){
+            if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function mostrar() {
+            let span =document.getElementsByTagName("span")[0];
+            span.innerHTML = '';
+            let cadena = document.form1.cadena.value;
+            if (document.form1.choose.value == '0') {
+                for (let i = cadena.length-1; i >= 0;i--) {
+                    let text= cadena[i];
+                    span.innerHTML += text;
+                }
+            }else if(document.form1.choose.value == '1'){
+                let text= cadena.substring(0,1);
+                let text2= cadena.substring(cadena.length-1,cadena.length);
+                span.innerHTML = text+text2;
+            }else{
+                for (let i =0; i < cadena.length; i++) {
+                    if (vocal(cadena[i])) {
+                        span.innerHTML += "_";
+                    }else{
+                        let text= cadena[i];
+                        span.innerHTML += text;
+                    }
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

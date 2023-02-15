@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        Protocolo<input type="text" name="protocol"><br>
+        Servidor<input type="text" name="server"><br>
+        Ruta<input type="text" name="route"><br>
+        <input type="button" onclick="createRoute()" value="Enviar">
+    </form>
+    <a></a>
+    <script>
+        function createRoute() {
+            let protocol=document.form1.protocol.value;
+            let server=document.form1.server.value;
+            let route=document.form1.route.value;
+            document.getElementsByTagName("a")[0].href=protocol+'://'+server+'/'+route;
+            document.getElementsByTagName("a")[0].innerHTML=protocol+'://'+server+'/'+route;
+        }
+    </script>
+</body>
+</html>

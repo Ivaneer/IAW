@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo ivaneer</title>
+</head>
+<body>
+    Inserte la altura<br><input type="text"><br><input type="submit" value="Bingo!" onclick="start()"><br>
+    <span></span>
+    <script>
+        function start() {
+            let cant=parseInt(document.getElementsByTagName('input')[0].value);
+            document.getElementsByTagName('span')[0].innerHTML='';
+            document.getElementsByTagName('span')[0].innerHTML='<table style="border: 1px solid black;"></table>';
+            for (let i=0;i<cant;i++) {
+                document.getElementsByTagName('table')[0].innerHTML+='<tr style="border: 1px solid black;"></tr>';
+                for(let j=0;j<i+1;j++) {
+                    if (Math.floor(Math.random()*10)+1 >5){
+                        document.getElementsByTagName('tr')[i].innerHTML+='<td onclick="bingo(this)" onmouseover="entro(this)" onmouseout="salgo(this)" style="border: 1px solid black;">'+(Math.floor(Math.random()*10)+1)+'</tr>';
+                    }
+                    else{
+                        document.getElementsByTagName('tr')[j].innerHTML+='<td onclick="bingo(this)" onmouseover="entro(this)" onmouseout="salgo(this)" style="border: 1px solid black;">'+(Math.floor(Math.random()*10)+1)+'</tr>';
+                    }
+                }
+                
+                
+            }
+        }
+
+        function bingo(obj){
+            if (parseInt(obj.innerHTML)<=5){
+                obj.innerHTML='0';
+            }else{
+                obj.innerHTML='';
+            }
+        }
+        function entro(obj){
+            obj.style.backgroundColor='red';
+        }
+        function salgo(obj){
+            obj.style.backgroundColor='white';
+        }
+
+    </script>
+</body>
+</html>

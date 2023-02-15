@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom</title>
+</head>
+<body onload="numeros()">
+    <script>
+        function numeros() {
+            let num1 = parseInt(prompt('Inserte un numero inferior'));
+            let num2 = parseInt(prompt('Inserte un numero superior'));
+            let num3 = parseInt(prompt('Inserte un numero'));
+            if (num3>num1 && num3<num2) {
+                document.write('El numero esta en el medio');
+            }else if (num3>num2) {
+                document.write('El numero esta en a la derecha');
+            }else{
+                document.write('El numero esta en a la izquierda');
+            }
+        }
+    </script>
+</body>
+</html>

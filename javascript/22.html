@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBBB</title>
+</head>
+<body>
+    <form name="form1" method="post">
+        Cantidad de XXX/YYY<br><input type="text" name="cantidad"><br>
+        <input type="button" onclick="mostrar()" value="Mostrar"><br>
+        <span></span>
+    </form>
+    <script>
+        function mostrar() {
+            document.getElementsByTagName('span')[0].innerHTML="";
+            let cant=parseInt(document.form1.cantidad.value);
+            for (let i = 0; i<cant; i++) {
+                if(i%2 == 0){
+                    document.getElementsByTagName('span')[0].innerHTML+=('<span onmouseover="cambiar(this)">XXX</span><br>');
+                }else{
+                    document.getElementsByTagName('span')[0].innerHTML+=('<span onmouseover="cambiar(this)">YYY</span><br>'); 
+                }
+
+            }
+        }
+
+        function cambiar(obj) {
+            obj.innerHTML="BBB";
+        }
+    </script>
+</body>
+</html>

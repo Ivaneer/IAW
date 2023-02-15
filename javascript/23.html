@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" name="form1">
+        <input type="text" name="cadena1"> Cadena 1<br>
+        <input type="text" name="cadena2"> Cadena 2<br>
+        <input type="text" name="cadena3"> Cadena 3<br>
+        <input type="button" name="button" value="Transformar" onclick="transformar()"><br>
+    </form>
+    <span></span>
+<script>
+    function transformar() {
+        let c1= document.form1.cadena1.value;
+        let c2= document.form1.cadena2.value;
+        let c3= document.form1.cadena3.value;
+        document.getElementsByTagName("span")[0].innerHTML="";
+        if (c1.length == c2.length && c1.length== c3.length && c2.length== c3.length) {
+        let frasefinal="";
+        for(let i=c2.length-1;i>=0;i--){
+            frasefinal+=c2[i];
+        }
+        for(let i=0;i<c1.length;i++){
+            if (frasefinal[i]==c1[i]){
+                document.getElementsByTagName("span")[0].innerHTML+=c1[i];
+            }else{
+                document.getElementsByTagName("span")[0].innerHTML+=c3[i];
+            }
+        }
+        }else{
+            for(let i=0;i<c3.length;i++){
+                if(i%2==0){
+                    document.getElementsByTagName("span")[0].innerHTML+=c3[i];
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

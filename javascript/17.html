@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ccambair arriba</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;">A</td>
+            <td style="border: 1px solid black;">B</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">C</td>
+            <td style="border: 1px solid black;">D</td>
+        </tr>
+    </table><br>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;" onclick="cambiar(document.getElementsByTagName('td')[0],0);" onmouseover="entro(document.getElementsByTagName('td')[0],0);" onmouseout="salgo(document.getElementsByTagName('td')[0],0);">1</td>
+            <td style="border: 1px solid black;" onclick="cambiar(document.getElementsByTagName('td')[1],1);" onmouseover="entro(document.getElementsByTagName('td')[1],1);" onmouseout="salgo(document.getElementsByTagName('td')[1],1);">2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;" onclick="cambiar(document.getElementsByTagName('td')[2],2);" onmouseover="entro(document.getElementsByTagName('td')[2],2);" onmouseout="salgo(document.getElementsByTagName('td')[2],2);">3</td>
+            <td style="border: 1px solid black;" onclick="cambiar(document.getElementsByTagName('td')[3],3);" onmouseover="entro(document.getElementsByTagName('td')[3],3);" onmouseout="salgo(document.getElementsByTagName('td')[3],3);">4</td>
+        </tr>
+    </table>
+    <script>
+        function cambiar(obj,pos){
+            if (obj.innerText != ''){
+                obj.innerText='';
+            }else{
+                ArrayLetra=['A','B','C','D'];
+                obj.innerText=ArrayLetra[pos];
+            }
+        }
+        function entro(obj){
+            obj.style.color='red';
+        }
+        function salgo(obj){
+            obj.style.color='yellow';
+        }
+
+    </script>
+</body>
+</html>
