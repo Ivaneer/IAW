@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="text" name="alt">Altura<br>
+        <input type="text" name="relleno">Relleno<br>
+        <input type="checkbox" name="check"> Invertida<br>
+        <input type="button" onclick="piramid()" value="Enviar"><br>
+    </form>
+    <span></span>
+    <script>
+        function piramid(){
+            
+            let alt= parseInt(document.form1.alt.value);
+            let relleno= document.form1.relleno.value;
+            let pinto ="";
+            if (document.form1.check.checked){
+                for (let i=alt; i>=1; i--){
+                let pintar ="";
+                for (let j=0; j<i; j++){
+                    if (j==0 || j==i-1 || i==alt){
+                        pintar+='*';
+                    }else{
+                        pintar+=relleno;
+                    }
+                }
+                pinto+=pintar+"<br>";
+                }
+                document.getElementsByTagName("span")[0].innerHTML=pinto;
+            }else{
+            for (let i=1; i<alt+1; i++){
+                let pintar ="";
+                for (let j=0; j<i; j++){
+                    if (j==0 || j==i-1 || i==alt){
+                        pintar+='*';
+                    }else{
+                        pintar+=relleno;
+                    }
+                }
+                pinto+=pintar+"<br>";
+                }
+                document.getElementsByTagName("span")[0].innerHTML=pinto;
+            }
+        }
+    </script>
+</body>
+</html>
